@@ -2,7 +2,7 @@ public class battle_3 {
 
     static int rhp;
     static int rf;
-    static int rd;
+
     static boolean rl;
     static int php;
     static int pf;
@@ -15,13 +15,13 @@ public class battle_3 {
     public void battle(Person person, Rooster rooster) {
         rhp = rooster.hp;
         rf = rooster.force;
-        rd = rooster.dexterity;
+
         rl = rooster.life;
         php = person.hp;
         pf = person.force;
         pd = person.dexterity;
         pl = person.life;
-        damager = rf * rd;
+        damager = rooster.force * rooster.dexterity;
         damagep = pf * pd;
 
         for (; rhp >= 0 && php >= 0; rhp = rhp - damagep, php = php - damager)
@@ -57,5 +57,3 @@ public class battle_3 {
 
         }
     }
-
-////hhhhhhhhhhhhhhhh
